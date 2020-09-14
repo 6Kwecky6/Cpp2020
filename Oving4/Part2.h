@@ -9,30 +9,39 @@
 class Window : public Gtk::Window {
 public:
     Gtk::VBox vbox;
-    Gtk::Entry entry;
+    Gtk::Entry firstNameEntry;
+    Gtk::Entry lastNameEntry;
     Gtk::Button button;
-    Gtk::Label label;
+    Gtk::Label resultText;
+    Gtk::Label firstNameText;
+    Gtk::Label lastNameText;
 
     Window() {
-        button.set_label("Click here");
+        firstNameText.set_text("First name");
+        lastNameText.set_text("Last name");
+        button.set_label("Combine names");
+        button.set_sensitive(false);
 
-        vbox.pack_start(entry);  //Add the widget entry to vbox
+        vbox.pack_start(firstNameText);
+        vbox.pack_start(firstNameEntry);
+        vbox.pack_start(lastNameText);
+        vbox.pack_start(lastNameEntry);  //Add the widget entry to vbox
         vbox.pack_start(button); //Add the widget button to vbox
-        vbox.pack_start(label);  //Add the widget label to vbox
+        vbox.pack_start(resultText);  //Add the widget resultText to vbox
 
         add(vbox);  //Add vbox to window
         show_all(); //Show all widgets
 
-        entry.signal_changed().connect([this]() {
-            label.set_text("Entry now contains: " + entry.get_text());
+        lastNameEntry.signal_changed().connect([this]() {
+            button.set_sensitive(!(firstNameEntry.get_text().compare("") == 0 || lastNameEntry.get_text().compare("") == 0));
         });
 
-        entry.signal_activate().connect([this]() {
-            label.set_text("Entry activated");
+        firstNameEntry.signal_changed().connect([this]() {
+            button.set_sensitive(!(firstNameEntry.get_text().compare("") == 0 || lastNameEntry.get_text().compare("") == 0));
         });
 
         button.signal_clicked().connect([this]() {
-            label.set_text("Button clicked");
+            resultText.set_text("Name: " + firstNameEntry.get_text() + ", " + lastNameEntry.get_text());
         });
     }
 };
