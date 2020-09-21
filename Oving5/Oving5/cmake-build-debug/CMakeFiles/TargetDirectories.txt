@@ -1,0 +1,3 @@
+/home/kwecky/Documents/Cpp2020/Cpp2020/Oving5/Oving5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kwecky/Documents/Cpp2020/Cpp2020/Oving5/Oving5/cmake-build-debug/CMakeFiles/Oving5.dir
+/home/kwecky/Documents/Cpp2020/Cpp2020/Oving5/Oving5/cmake-build-debug/CMakeFiles/edit_cache.dir

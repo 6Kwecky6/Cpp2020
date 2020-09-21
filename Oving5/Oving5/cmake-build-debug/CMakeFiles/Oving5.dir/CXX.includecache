@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kwecky/Documents/Cpp2020/Cpp2020/Oving5/Oving5/ChessBoard.h
+string
+-
+vector
+-
+
+/home/kwecky/Documents/Cpp2020/Cpp2020/Oving5/Oving5/DrawBoard.h
+iostream
+-
+ChessBoard.h
+/home/kwecky/Documents/Cpp2020/Cpp2020/Oving5/Oving5/ChessBoard.h
+
+/home/kwecky/Documents/Cpp2020/Cpp2020/Oving5/Oving5/main.cpp
+iostream
+-
+memory
+-
+ChessBoard.h
+/home/kwecky/Documents/Cpp2020/Cpp2020/Oving5/Oving5/ChessBoard.h
+DrawBoard.h
+/home/kwecky/Documents/Cpp2020/Cpp2020/Oving5/Oving5/DrawBoard.h
+

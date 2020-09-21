@@ -1,0 +1,4 @@
+/home/kwecky/Downloads/clion-2019.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/kwecky/Documents/Cpp2020/Cpp2020/Oving5/Oving5
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/kwecky/Documents/Cpp2020/Cpp2020/Oving5/Oving5/cmake-build-debug
